@@ -14,7 +14,7 @@ function EditPage(){
         <div>
             <div style={{width:"500px", border:"2px solid yellow"}} ref={memeRef} className="mt-5 mb-5">
                 <img src={params.get("url")} alt="" width="250px" />
-                {Array(count).fill(0).map((e)=><Text />)}
+                {Array(count).fill(0).map((e,index)=><div key={index}><Text /></div>)}
             </div>
             <button onClick={addText}>Add Text</button>
             <button variant="success" onClick={()=>exportComponentAsJPEG(memeRef)}>Save</button>
