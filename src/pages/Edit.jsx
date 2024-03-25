@@ -1,4 +1,4 @@
-import { createRef, useState } from "react";
+import { createRef, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Text from '../components/Text';
 import {Button} from 'react-bootstrap';
@@ -6,7 +6,7 @@ import{exportComponentAsJPEG} from 'react-component-export-image';
 function EditPage(){
     const[params]=useSearchParams();
     const[count,setCount]=useState(0);
-    const memeRef=createRef();
+    const memeRef=useRef();
     function addText(){
         setCount(count+1);
     }
